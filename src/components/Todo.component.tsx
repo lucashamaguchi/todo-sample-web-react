@@ -16,9 +16,11 @@ const mapStateToProps = (state: any) => {
 
 const _Todos = ({ todos }: { todos: Todo[] }) => {
   const dispatch = useDispatch();
+
   const refreshTodos = () => {
     dispatch(actions[types.TODO_LIST]());
   };
+
   useEffect(refreshTodos, [dispatch]);
 
   return (
