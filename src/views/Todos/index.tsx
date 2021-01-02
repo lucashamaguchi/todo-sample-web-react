@@ -1,4 +1,5 @@
 import TodosComponent from "../../components/Todo.component";
+// import TodosClassComponent from "../../components/TodoClass.component";
 
 const Todos = () => {
   return (
@@ -7,6 +8,7 @@ const Todos = () => {
         Fala ai
       </h1>
       <TodosComponent />
+      {/* <TodosClassComponent /> */}
     </div>
   )
 }
