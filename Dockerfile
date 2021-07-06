@@ -4,12 +4,9 @@ FROM node:14.1-alpine AS builder
 WORKDIR /app
 COPY . ./
 
-RUN rm -rf ./packages/clients/site
-RUN yarn bootstrap
-
 ENV PATH="./node_modules/.bin:$PATH"
 
-RUN cd packages/clients/app && yarn build
+RUN yarn build
 
 FROM nginx:1.17-alpine
 RUN apk --no-cache add curl
