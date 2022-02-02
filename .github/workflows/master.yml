@@ -59,6 +59,7 @@ jobs:
         region: ${{ env.DEPLOY_ECR_REGION }}
         tags: latest-${{ env.ENV }},${{ github.sha }}
         create_repo: true
+        extra_build_args: --build-arg ENV=${{ env.ENV }}
 
     - name: "set service url"
       run: |
