@@ -1,5 +1,6 @@
 FROM node:14.1-alpine AS builder
 
+ARG ENV
 
 WORKDIR /app
 COPY . ./
